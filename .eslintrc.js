@@ -1,8 +1,8 @@
-
 module.exports = {
   env: {
     browser: true,
     es6: true,
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -13,6 +13,7 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    __DEV__: true
   },
   parser: 'babel-eslint',
   parserOptions: {
@@ -25,6 +26,9 @@ module.exports = {
   plugins: [
     'react',
     'prettier',
+    'react-hooks',
+    'jsx-a11y',
+    'import'
   ],
   rules: {
     'prettier/prettier': 'error',
@@ -34,6 +38,15 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     'no-param-reassign': 'off',
-    'no-console': ['error', { allow: ['tron'] }]
+    'no-console': ['error', { allow: ['tron'] }],
+
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'no-unused-vars': ["error", { argsIgnorePattern: "^_" }],
+    'react/jsx-one-expression-per-line': 'off',
+    'global-require': 'off',
+    'react-native/no-raw-text': 'off',
+    'no-underscore-dangle': 'off',
+    camelcase: 'off'
   },
 };
