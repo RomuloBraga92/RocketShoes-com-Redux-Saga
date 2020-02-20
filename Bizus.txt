@@ -1,0 +1,84 @@
+Deletar ESlint do packagejson
+
+editorconfig para true e end of line para lf
+
+yarn add eslint -D
+
+yarn eslint --init
+
+remover o package.lock e dar yarn
+
+yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
+
+eslint
+module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'prettier',
+    'prettier/react',
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+    'prettier',
+  ],
+  rules: {
+    'prettier/prettier': 'error',
+    'react/jsx-filename-extension': [
+      'warn',
+      { extensions: ['.jsx', '.js'] }
+    ],
+    'import/prefer-default-export': 'off',
+    'no-param-reassign': 'off',
+    'no-console': ['error', { allow: ['tron'] }]
+  },
+};
+
+
+.prettierrc
+
+{
+  "singleQuote": true,
+  "trailingComma": "es5"
+}
+
+yarn add styled-components
+
+yarn add react-icons
+
+yarn add reactotron-react-js reactotron-redux
+
+yarn add immer
+
+yarn add polished
+
+yarn global add json-server
+
+json-server server.json -p 3333  
+
+git init
+
+git add
+
+git commit -m
+
+git remote add origin http..
+
+git push -u origin master
+
